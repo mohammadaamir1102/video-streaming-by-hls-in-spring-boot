@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: video-streaming-by-hls-in-spring-boot
+
+  web:
+    resources:
+      static-locations: file:videos/
+
+  mvc:
+    contentnegotiation:
+      media-types:
+        m3u8: application/vnd.apple.mpegurl
+        ts: video/mp2t
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+server:
+  port: 9090
